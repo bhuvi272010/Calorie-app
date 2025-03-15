@@ -268,9 +268,9 @@ let FreqExercise = document.getValue;
 let FreqExercise = 1;
 let KiloCalories;
 
-if (FreqExercise === 1) {
+if (FreqExercise === "Never") {
   KiloCalories = 1600; // 1600-1700
-} else if (FreqExercise === 2) {
+} else if (FreqExercise === "Sometimes") {
   KiloCalories = 1800; // 1800-1900
 } else {
   KiloCalories = 2000; // 2000-2100
