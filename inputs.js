@@ -1,3 +1,147 @@
+<script>
+    {
+    "nutritionSummary": {
+        "nutrients": [
+            {
+                "name": "Calories",
+                "amount": 310,
+                "unit": "cal",
+                "percentOfDailyNeeds": 16
+            },
+            {
+                "name": "Fat",
+                "amount": 25,
+                "unit": "g",
+                "percentOfDailyNeeds": 38
+            },
+            {
+                "name": "Carbohydrates",
+                "amount": 1,
+                "unit": "g",
+                "percentOfDailyNeeds": 0
+            },
+            {
+                "name": "Protein",
+                "amount": 20,
+                "unit": "g",
+                "percentOfDailyNeeds": 40
+            }
+        ]
+    },
+    "nutritionSummaryBreakfast": {
+        "nutrients": [
+            {
+                "name": "Calories",
+                "amount": 0,
+                "unit": "cal",
+                "percentOfDailyNeeds": 0
+            },
+            {
+                "name": "Fat",
+                "amount": 0,
+                "unit": "g",
+                "percentOfDailyNeeds": 0
+            },
+            {
+                "name": "Carbohydrates",
+                "amount": 0,
+                "unit": "g",
+                "percentOfDailyNeeds": 0
+            },
+            {
+                "name": "Protein",
+                "amount": 0,
+                "unit": "g",
+                "percentOfDailyNeeds": 0
+            }
+        ]
+    },
+    "nutritionSummaryLunch": {
+        "nutrients": [
+            {
+                "name": "Calories",
+                "amount": 310,
+                "unit": "cal",
+                "percentOfDailyNeeds": 16
+            },
+            {
+                "name": "Fat",
+                "amount": 25,
+                "unit": "g",
+                "percentOfDailyNeeds": 38
+            },
+            {
+                "name": "Carbohydrates",
+                "amount": 1,
+                "unit": "g",
+                "percentOfDailyNeeds": 0
+            },
+            {
+                "name": "Protein",
+                "amount": 20,
+                "unit": "g",
+                "percentOfDailyNeeds": 40
+            }
+        ]
+    },
+    "nutritionSummaryDinner": {
+        "nutrients": [
+            {
+                "name": "Calories",
+                "amount": 0,
+                "unit": "cal",
+                "percentOfDailyNeeds": 0
+            },
+            {
+                "name": "Fat",
+                "amount": 0,
+                "unit": "g",
+                "percentOfDailyNeeds": 0
+            },
+            {
+                "name": "Carbohydrates",
+                "amount": 0,
+                "unit": "g",
+                "percentOfDailyNeeds": 0
+            },
+            {
+                "name": "Protein",
+                "amount": 0,
+                "unit": "g",
+                "percentOfDailyNeeds": 0
+            }
+        ]
+    },
+    "date": 1589155200,
+    "day": "Monday",
+    "items": [
+        {
+            "id": 1976489,
+            "slot": 1,
+            "position": 1,
+            "type": "RECIPE",
+            "value": {
+                "servings": 2,
+                "id": 1023004,
+                "title": "Foolproof Meatloaf",
+                "imageType": ""
+            }
+        },
+        {
+            "id": 1976490,
+            "slot": 2,
+            "position": 2,
+            "type": "CUSTOM_FOOD",
+            "value": {
+                "servings": 1,
+                "id": 345,
+                "title": "Denn's Lamb Bratwurst - 1/2 Pkg",
+                "image": "https://img.spoonacular.com/ingredients_100x100/bratwurst.jpg"
+            }
+        }
+    ]
+}
+</script>
 username = input(str("What's your name? "))
 
 #getting the demographics of the user
