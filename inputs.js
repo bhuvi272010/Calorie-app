@@ -141,6 +141,107 @@
         }
     ]
 }
+{
+  "nutrition": {
+    "recipesUsed": 25,
+    "calories": {
+      "value": 508,
+      "unit": "calories",
+      "confidenceRange95Percent": {
+        "min": 428.97,
+        "max": 571.98
+      },
+      "standardDeviation": 182.4
+    },
+    "fat": {
+      "value": 21,
+      "unit": "g",
+      "confidenceRange95Percent": {
+        "min": 21.29,
+        "max": 32.95
+      },
+      "standardDeviation": 14.88
+    },
+    "protein": {
+      "value": 29,
+      "unit": "g",
+      "confidenceRange95Percent": {
+        "min": 22.58,
+        "max": 33.7
+      },
+      "standardDeviation": 14.19
+    },
+    "carbs": {
+      "value": 40,
+      "unit": "g",
+      "confidenceRange95Percent": {
+        "min": 29.74,
+        "max": 44.96
+      },
+      "standardDeviation": 19.42
+    }
+  },
+  "category": {
+    "name": "burger",
+    "probability": 0.99
+  },
+  "recipes": [
+    {
+      "id": 477749,
+      "title": "Burger Club: Award-Winning Logan County Burger Patty Melt",
+      "imageType": "jpg",
+      "sourceUrl": "http://www.barbarabakes.com/2010/05/burger-club-award-winning-logan-county/"
+    },
+    {
+      "id": 493632,
+      "title": "New York Burger Week: Pretzel Burger with Beer Cheese",
+      "imageType": "jpg",
+      "sourceUrl": "http://www.foodrepublic.com/2013/09/23/new-york-burger-week-pretzel-burger-beer-cheese"
+    },
+    {
+      "id": 23359,
+      "title": "Beef Burger Recipe (elvis Burger With Salad & Gherkin)",
+      "imageType": "jpg",
+      "sourceUrl": "http://www.jamieoliver.com/recipes/beef-recipes/elvis-burger-with-pickled-gherkin"
+    },
+    {
+      "id": 149115,
+      "title": "Surf N' Turf Burger (Grilled Burger with Lobster and Bacon)",
+      "imageType": "jpg",
+      "sourceUrl": "http://www.seriouseats.com/recipes/2013/06/lobster-bacon-burger-recipe.html"
+    },
+    {
+      "id": 861442,
+      "title": "Istanbul-Style Wet Burger (Islak Burger)",
+      "imageType": "jpg",
+      "sourceUrl": "http://www.epicurious.com/recipes/food/views/istanbul-style-wet-burger-islak-burger?mbid=nl_02272017_Daily_CTN_PM+(1)"
+    },
+    {
+      "id": 600423,
+      "title": "Rajma Burger (Red Kidney Beans Burger)",
+      "imageType": "jpg",
+      "sourceUrl": "http://www.spiceupthecurry.com/rajma-burger-red-kidney-beans-burger/"
+    },
+    {
+      "id": 493634,
+      "title": "Chicago Burger Week: The Chicago Deep Dish Pizza Burger",
+      "imageType": "jpg",
+      "sourceUrl": "http://www.foodrepublic.com/2013/09/30/chicago-burger-week-chicago-deep-dish-pizza-burger"
+    },
+    {
+      "id": 487346,
+      "title": "aloo tikki burger , north indian style aloo tikki burger",
+      "imageType": "jpg",
+      "sourceUrl": "http://www.vegrecipesofindia.com/aloo-tikki-burger/"
+    },
+    {
+      "id": 607330,
+      "title": "Aloo Tikki Burger | How to make aloo tikki burger at home",
+      "imageType": "jpg",
+      "sourceUrl": "http://www.spiceupthecurry.com/aloo-tikki-burger-recipe/"
+    }
+  ]
+}
 </script>
 
 //Test Variables
