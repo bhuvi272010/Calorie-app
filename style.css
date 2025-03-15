@@ -67,6 +67,7 @@ form {
     margin: auto;
     justify-content: center;
     display: inline-block;
+    line-height: 25px;
 }
 
 h2 {
