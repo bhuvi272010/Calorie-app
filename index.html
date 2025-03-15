@@ -10,7 +10,7 @@
 <body>
 
 <h1 id="title">BURN 'N EARN</h1>
-<div id="navbar">
+<div id="navbar"> <!-- Navigation Bar -->
     <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="calories.html">Calories</a></li>
@@ -34,7 +34,7 @@
        </select><br>
        <label for="weight">Weight in kilograms: </label><br> <!-- Weight input -->
        <input type="text" id="weight" name="weight"><br>
-       <label for="height">Height in centimeters: </label><br> <!-- Weight input -->
+       <label for="height">Height in centimeters: </label><br> <!-- Height input -->
        <input type="text" id="height" name="height"><br>
        <label for="exercise">How much do you exercise regularly? </label><br> <!-- Exercise frequency -->
        <select name="exercise" id="exercise">
@@ -49,6 +49,7 @@
     <p id="result"></p>
     <script>
         function calculate() {
+            // Get variables from form
             const age = document.getElementById("age").value;
             let genderdropdown = document.getElementById("gender");
             let genderValue = genderdropdown.value;
@@ -58,6 +59,7 @@
             var BMR;
             var AMR;
             
+            // Calculate BMR
             if (genderValue === "female") {
                 BMR = 655.1 + (9.563 * parseInt(weight)) + (1.850 * parseInt(height)) - (4.676 * parseInt(age));
                 BMR = Math.round(BMR, 2);
@@ -66,6 +68,7 @@
                 BMR = Math.round(BMR, 2);
             }
             
+            // Calculate AMR
             if (FreqExercise === "never") {
                 AMR = BMR * 1.2;
             } else if (FreqExercise === "sometimes") {

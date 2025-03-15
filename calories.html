@@ -22,7 +22,66 @@
     
 <div id="container">
    <h2>Calorie Tracker</h2>
-   <script src="inputs.js"></script>
+    <p id="totalcals"></p>
+    <p id="goalmet"></p>
+    <form>
+       <label for="food">Food Eaten: </label><br> <!-- Food input -->
+       <input type="text" id="food" name="food"><br>
+       <label for="time">Time of Day: </label><br> <!-- Weight input -->
+       <select name="time" id="time">
+           <option value="none" selected disabled hidden>Select an Option</option>
+           <option value="breakfast">Breakfast</option>
+           <option value="lunch">Lunch</option>
+           <option value="dinner">Dinner</option>
+           <option value="snack">Snack</option>
+       </select><br>
+       <label for="calories">Calories: </label><br> <!-- Height input -->
+       <input type="text" id="calories" name="calories"><br>
+       <button type="button" onclick="calculate()">Submit</button>
+    </form>
+   <script>
+    // FoodToday object to store food data
+    let FoodToday = {
+      Name: [], //name of food
+      TimeOfDay: [], //breakfast, lunch, dinner, or snack
+      Calories: [] //straightforward
+    };
+
+    // Food class
+    class Food {
+      constructor(name, category, calories) {
+        this.name = name;
+        this.category = category;
+        this.calories = calories;
+
+        // Adding to the FoodToday dictionary
+        FoodToday.Name.push(this.name);
+        FoodToday.TimeOfDay.push(this.category);
+        FoodToday.Calories.push(this.calories);
+      }
+    }
+    function calculate() {
+        foodname = document.getElementById("food").value;
+        TimeOfDay = document.getElementById("time").value;
+        calories = parseInt(document.getElementById("calories").value);
+        
+        // Creating a new food object
+        let foodname = new Food(foodname, TimeOfDay, calories);
+
+        // Displaying the data as a table
+        console.table(FoodToday);
+
+        //total summary of number of calories
+        const sumCalories = FoodToday.Calories.reduce((acc, curr) => acc + curr, 0);
+        console.log("Total Calories: " + sumCalories);
+
+        if (sumCalories >= KiloCalories){
+          document.getElementById("totalcals").innerHTML = "Congratulations on meeting your calorie goal today!";
+        } else{
+          document.getElementById("goalmet").innerHTML = "Keep on going! You can reach your goal!";
+        }
+    }
+    </script>
     
 </div>
 
