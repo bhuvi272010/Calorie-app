@@ -1,8 +1,13 @@
+@font-face {
+  font-family: "Funnel Display";
+  src: url(media/FunnelDisplay.ttf);
+}
+
 body {
     background-color: antiquewhite;
     margin: auto;
     width: 1000px;
-    font-family: 'Funnel Display';
+    font-family: "Funnel Display";
 }
 
 #title {
