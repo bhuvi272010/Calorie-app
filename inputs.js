@@ -1,6 +1,6 @@
 <script>
-    {
-    "nutritionSummary": {
+    { 
+let =  "nutritionSummary": {
         "nutrients": [
             {
                 "name": "Calories",
@@ -141,8 +141,9 @@
         }
     ]
 }
-{
-  "nutrition": {
+   
+{ 
+let = "nutrition": {
     "recipesUsed": 25,
     "calories": {
       "value": 508,
@@ -242,6 +243,7 @@
     }
   ]
 }
+  
 </script>
 
 //Test Variables
