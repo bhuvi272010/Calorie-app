@@ -23,9 +23,9 @@
 <div id="container">
    <h2>Calorie Tracker</h2>
     <form>
-        <label for="food">Food Name:</label>
+        <label for="food">Food Name:</label> <!-- Food name input -->
         <input type="text" id="food"><br>
-        <label for="time">Time of Day:</label>
+        <label for="time">Time of Day:</label> <!-- Time of day food is eaten -->
         <select name="time" id="time">
             <option value="none" selected disabled hidden>Select an Option</option>
             <option value="Breakfast">Breakfast</option>
@@ -33,12 +33,12 @@
             <option value="Dinner">Dinner</option>
             <option value="Snack">Snack</option>
         </select><br>
-        <label for="calories">Calories:</label>
+        <label for="calories">Calories:</label> <!-- Calories eaten -->
         <input type="number" id="calories"><br>
         <button type="button" onclick="calculate()">Add Food</button>
     </form>
+    <!-- Where total calories, whether user's goal is met, and  -->
     <p id="totalcals"></p>
-    <p id="goalmet"></p>
 
     <table border="1" id="foodTable" style="margin: auto; justify-content: center; display: inline-block;">
         <thead></thead>
