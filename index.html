@@ -14,7 +14,7 @@
     <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="calories.html">Calories</a></li>
-        <li><a href="meals.html">Meal Plan</a></li>
+        <li><a href="mealplan.html">Meal Plan</a></li>
     </ul>
 </div>
 
@@ -25,7 +25,7 @@
    <p>Hello! Let's get started on your burning journey.</p>
    <form>
        <label for="age">Age: </label><br> <!-- Age input -->
-       <input type="text" id="age" name="age"><br>
+       <input type="number" id="age" name="age"><br>
        <label for="gender">Gender: </label><br> <!-- Gender selection -->
        <select name="gender" id="gender">
            <option value="none" selected disabled hidden>Select an Option</option>
@@ -33,9 +33,9 @@
            <option value="female">Female</option>
        </select><br>
        <label for="weight">Weight in kilograms: </label><br> <!-- Weight input -->
-       <input type="text" id="weight" name="weight"><br>
+       <input type="number" id="weight" name="weight"><br>
        <label for="height">Height in centimeters: </label><br> <!-- Height input -->
-       <input type="text" id="height" name="height"><br>
+       <input type="number" id="height" name="height"><br>
        <label for="exercise">How much do you exercise regularly? </label><br> <!-- Exercise frequency -->
        <select name="exercise" id="exercise">
            <option value="none" selected disabled hidden>Select an Option</option>
@@ -61,10 +61,10 @@
             
             // Calculate BMR
             if (genderValue === "female") {
-                BMR = 655.1 + (9.563 * parseInt(weight)) + (1.850 * parseInt(height)) - (4.676 * parseInt(age));
+                BMR = 655.1 + (9.563 * weight) + (1.850 * height) - (4.676 * age);
                 BMR = Math.round(BMR, 2);
             } else {
-                BMR = 66.47 + (13.75 * parseInt(weight)) + (5.003 * parseInt(height)) - (5.003 * parseInt(age));
+                BMR = 66.47 + (13.75 * weight) + (5.003 * height) - (5.003 * age);
                 BMR = Math.round(BMR, 2);
             }
             

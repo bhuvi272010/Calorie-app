@@ -7,7 +7,7 @@ body {
     background-color: antiquewhite;
     margin: auto;
     width: 1000px;
-    font-family: "Funnel Display";
+    font-family: 'Funnel Display';
 }
 
 #title {
@@ -60,6 +60,7 @@ li a:hover {
     box-sizing: border-box;
     justify-content: center;
     margin-bottom: 30px;
+    overflow: scroll;
 }
 
 form {
@@ -72,4 +73,5 @@ form {
 
 h2 {
     font-size: 40px;
-    
+    margin:10px;
+}
