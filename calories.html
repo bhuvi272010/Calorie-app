@@ -20,69 +20,104 @@
 
 <img src="media/running.jpg" style="display: block; margin: auto; width: 900px; height: 200px; overflow: hidden; object-fit: cover;">
     
-<div id="container">
-   <h2>Calorie Tracker</h2>
+<head>
+    <title>Food Log</title>
+</head>
+<body>
+    <h1>Food Calorie Tracker</h1>
+
+    <label for="food">Food Name:</label>
+    <input type="text" id="food"><br>
+
+    <label for="time">Time of Day:</label>
+    <input type="text" id="time" placeholder="breakfast, lunch, dinner, or snack"><br>
+
+    <label for="calories">Calories:</label>
+    <input type="number" id="calories"><br>
+
+    <button onclick="calculate()">Add Food</button>
+
+    <h2>Total Calories:</h2>
     <p id="totalcals"></p>
     <p id="goalmet"></p>
-    <form>
-       <label for="food">Food Eaten: </label><br> <!-- Food input -->
-       <input type="text" id="food" name="food"><br>
-       <label for="time">Time of Day: </label><br> <!-- Weight input -->
-       <select name="time" id="time">
-           <option value="none" selected disabled hidden>Select an Option</option>
-           <option value="breakfast">Breakfast</option>
-           <option value="lunch">Lunch</option>
-           <option value="dinner">Dinner</option>
-           <option value="snack">Snack</option>
-       </select><br>
-       <label for="calories">Calories: </label><br> <!-- Height input -->
-       <input type="text" id="calories" name="calories"><br>
-       <button type="button" onclick="calculate()">Submit</button>
-    </form>
-   <script>
-    // FoodToday object to store food data
-    let FoodToday = {
-      Name: [], //name of food
-      TimeOfDay: [], //breakfast, lunch, dinner, or snack
-      Calories: [] //straightforward
-    };
+
+    <table border="1" id="foodTable">
+        <thead></thead>
+        <tbody></tbody>
+    </table>
+
+ <script>
+    let FoodToday = [];
+    let isTableHeadGenerated = false; // Flag to track if the table head is already generated
 
     // Food class
     class Food {
-      constructor(name, category, calories) {
-        this.name = name;
-        this.category = category;
-        this.calories = calories;
-
-        // Adding to the FoodToday dictionary
-        FoodToday.Name.push(this.name);
-        FoodToday.TimeOfDay.push(this.category);
-        FoodToday.Calories.push(this.calories);
-      }
-    }
-    function calculate() {
-        foodname = document.getElementById("food").value;
-        TimeOfDay = document.getElementById("time").value;
-        calories = parseInt(document.getElementById("calories").value);
-        
-        // Creating a new food object
-        let foodname = new Food(foodname, TimeOfDay, calories);
-
-        // Displaying the data as a table
-        console.table(FoodToday);
-
-        //total summary of number of calories
-        const sumCalories = FoodToday.Calories.reduce((acc, curr) => acc + curr, 0);
-        console.log("Total Calories: " + sumCalories);
-
-        if (sumCalories >= KiloCalories){
-          document.getElementById("totalcals").innerHTML = "Congratulations on meeting your calorie goal today!";
-        } else{
-          document.getElementById("goalmet").innerHTML = "Keep on going! You can reach your goal!";
+        constructor(name, category, calories) {
+            this.name = name;
+            this.category = category;
+            this.calories = calories;
         }
     }
-    </script>
-    
+
+    function generateTableHead(table, data) {
+        let thead = table.createTHead();
+        let row = thead.insertRow();
+        for (let key of data) {
+            let th = document.createElement("th");
+            let text = document.createTextNode(key);
+            th.appendChild(text);
+            row.appendChild(th);
+        }
+    }
+
+    function generateTable(table, data) {
+        let tbody = table.querySelector("tbody");
+        tbody.innerHTML = ""; // Clear previous rows
+
+        for (let element of data) {
+            let row = tbody.insertRow();
+            for (let key in element) {
+                let cell = row.insertCell();
+                let text = document.createTextNode(element[key]);
+                cell.appendChild(text);
+            }
+        }
+    }
+
+    function calculate() {
+        let foodname = document.getElementById("food").value;
+        let timeOfDay = document.getElementById("time").value;
+        let calories = parseInt(document.getElementById("calories").value);
+
+        // Creating a new food object and adding it to the list
+        let newFood = new Food(foodname, timeOfDay, calories);
+        FoodToday.push(newFood);
+
+        // Generate the table head only once
+        let table = document.getElementById("foodTable");
+        if (!isTableHeadGenerated) {
+            let data = Object.keys(newFood);
+            generateTableHead(table, data);
+            isTableHeadGenerated = true;
+        }
+
+        // Update the table with the new data
+        generateTable(table, FoodToday);
+
+        // Total summary of number of calories
+        const sumCalories = FoodToday.reduce((acc, curr) => acc + curr.calories, 0);
+        document.getElementById("totalcals").innerHTML = "Total Calories: " + sumCalories;
+
+        if (sumCalories >= 2000) {
+            document.getElementById("goalmet").innerHTML = "Congratulations on meeting your calorie goal today!";
+        } else {
+            document.getElementById("goalmet").innerHTML = "Keep on going! You can reach your goal!";
+        }
+
+        // Log to the console for debugging
+        console.table(FoodToday);
+    }
+</script>   
 </div>
 
 </body>
